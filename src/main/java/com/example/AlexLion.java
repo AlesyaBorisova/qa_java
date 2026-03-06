@@ -5,7 +5,7 @@ import java.util.List;
 public class AlexLion extends Lion {
 
     public AlexLion() throws Exception {
-        super("Самец", new Predator() {
+        super("Самец", new Feline() {
             @Override
             public List<String> eatMeat() {
                 return List.of("Животные", "Птицы", "Рыба");

@@ -30,7 +30,7 @@ public class LionParameterizedTest {
         @Test
         public void shouldCheckManeDependingOnSex() throws Exception {
 
-            Predator predatorStub = new Predator() {
+            Feline felineStub = new Feline() {
                 @Override
                 public List<String> eatMeat() throws Exception {
                     return null;
@@ -42,7 +42,7 @@ public class LionParameterizedTest {
                 }
             };
 
-            Lion lion = new Lion(sex, predatorStub);
+            Lion lion = new Lion(sex, felineStub);
             assertEquals(expected, lion.doesHaveMane());
         }
 

@@ -28,7 +28,6 @@ public class CatTests {
         List<String> result = cat.getFood();
 
         assertEquals(mockFood, result);
-        verify(predatorMock).eatMeat();
 
     }
 

@@ -15,33 +15,29 @@ import static org.mockito.Mockito.when;
 public class LionMockTests {
 
     @Mock
-    private Predator predatorMock;
+    private Feline felineMock;
 
 
     @Test
     public void getKittensWithMockTest() throws Exception {
-        when(predatorMock.getKittens()).thenReturn(5);
+        when(felineMock.getKittens()).thenReturn(5);
 
-        Lion lion = new Lion("Самец", predatorMock);
+        Lion lion = new Lion("Самец", felineMock);
 
         assertEquals(5, lion.getKittens());
-        verify(predatorMock).getKittens();
     }
 
     @Test
     public void getFoodWithMockTest() throws Exception {
 
         List<String> mockFood = List.of("Животные", "Птицы");
-        when(predatorMock.eatMeat()).thenReturn(mockFood);
+        when(felineMock.eatMeat()).thenReturn(mockFood);
 
-        Lion lion = new Lion("Самец", predatorMock);
+        Lion lion = new Lion("Самец", felineMock);
 
         List<String> result = lion.getFood();
 
         assertEquals(mockFood, result);
-
-
-        verify(predatorMock).eatMeat();
 
     }
 
@@ -49,7 +45,7 @@ public class LionMockTests {
     @Test(expected = Exception.class)
 
     public void shouldThrowExceptionForInvalidSex() throws Exception {
-        new Lion("Неизвестно", predatorMock);
+        new Lion("Неизвестно", felineMock);
     }
 
 

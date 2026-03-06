@@ -22,23 +22,23 @@ public class AlexLionTests {
     }
 
     @Test
-    public void shouldReturnFriends()throws Exception {
+    public void shouldReturnFriends() throws Exception {
         AlexLion alexLion = new AlexLion();
         List<String> friends = alexLion.getFriends();
 
         assertEquals(List.of("Мартин", "Глория", "Мелман"), friends);
     }
 
-@Test
-public void shouldHaveMane() throws Exception {
-AlexLion alexLion = new AlexLion();
-assertTrue(alexLion.doesHaveMane());
-}
+    @Test
+    public void shouldHaveMane() throws Exception {
+        AlexLion alexLion = new AlexLion();
+        assertTrue(alexLion.doesHaveMane());
+    }
 
-@Test
-public void shouldReturnFoodFromPredator() throws Exception {
-AlexLion alexLion = new AlexLion();
-List<String>food = alexLion.getFood();
-assertEquals(List.of("Животные", "Птицы", "Рыба"), food);
-}
+    @Test
+    public void shouldReturnFoodFromPredator() throws Exception {
+        AlexLion alexLion = new AlexLion();
+        List<String> food = alexLion.getFood();
+        assertEquals(List.of("Животные", "Птицы", "Рыба"), food);
+    }
 }
